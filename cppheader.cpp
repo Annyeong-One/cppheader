@@ -1,3 +1,5 @@
+// https://github.com/Annyeong-One/cppheader
+// Annyeong1's header
 #include<bits/stdc++.h>
 using namespace std;
 #define int long long int // redirect
@@ -11,7 +13,7 @@ using namespace std;
 #define rev(x) reverse(fall(x)) // macro
 int gcd(int a, int b){if(a<b){a=a^b;b=a^b;a=a^b;} return b==0?a:gcd(b,a%b);} // function
 int lcm(int a, int b){return a/gcd(a,b)*b;} // function
-// declarations
+// variable declarations
 
 // functions
 
