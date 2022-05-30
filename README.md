@@ -16,7 +16,7 @@
 > gcd(x,y) : Great Common Divisor 함수, long long 범위 재귀함수 \
 > lcm(x,y) : Least Common Multiplier 함수, long long 범위 (gcd 함수에 종속)
 ## Presettings in main()
-> int가 long long으로 redirect되었으므로 signed main 사용 필요 \
+> int가 long long으로 redirect되었으므로 signed main 사용 \
 > cin/cout 최적화 적용 \
 > return 기본값 0으로 설정
 ## Source Code
