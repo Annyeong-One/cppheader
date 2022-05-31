@@ -2,8 +2,9 @@
 // Annyeong1's header
 #include<bits/stdc++.h>
 using namespace std;
-#define int long long int // redirect
-#define ll long long int // redirect
+#define i32 signed // redirect
+#define int long long // redirect
+#define ll long long // redirect
 #define endl '\n' // redirect
 #define fall(x) (x).begin(), (x).end() // macro
 #define f2(i,x) for((i)=0; (i)<(x); (i)++) // macro
@@ -17,10 +18,10 @@ int lcm(int a, int b){return a/gcd(a,b)*b;} // function
 
 // functions
 
-signed main(){
+i32 main(){
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
     // code
 
     return 0;
