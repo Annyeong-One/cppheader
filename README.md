@@ -1,5 +1,5 @@
 # Annyeong-One/cppheader
-는 Codeforces, AtCoder 등의 Competitive Programing 및 BOJ, Koistudy 등의 Problem Solving 사이트에서 개인적으로 사용하기 위해 만든 C++ 헤더입니다. 
+는 gs22059 / annyeong1 가 Codeforces, AtCoder 등의 Competitive Programing 및 BOJ, Koistudy 등의 Problem Solving 사이트에서 개인적으로 사용하기 위해 만든 C++ 헤더입니다. 
 ## Features
 > SIMD 제공 (1.2~)
 > sort, reverse 매크로 기능 제공 (1.1~)
