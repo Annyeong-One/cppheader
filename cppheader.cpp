@@ -1,33 +1,29 @@
-// https://github.com/Annyeong-One/cppheader
-// Annyeong1's header
-#include<bits/stdc++.h> // basic all in one header
-#include <immintrin.h> // SIMD optimization
-using namespace std; // std functions
-#pragma GCC optimize("O3") // SIMD
-#pragma GCC optimize("Ofast") // SIMD
-#pragma GCC optimize("unroll-loops") // SIMD
-#pragma GCC target("avx,avx2,fma") // SIMD
+#include<bits/stdc++.h> // header
+using namespace std; // std function
 #define i32 signed // redirect
 #define int long long // redirect
 #define ll long long // redirect
 #define endl '\n' // redirect
-#define fall(x) (x).begin(), (x).end() // macro
+#define elif else if // redirect
 #define f2(i,x) for((i)=0; (i)<(x); (i)++) // macro
 #define f2b(i,x) for((i)=(x)-1; (i)>=0; (i)--) // macro
 #define f3(i,f,t) for((i)=(f);(i)<=(t);(i)++) // macro
+#define fall(x) (x).begin(), (x).end() // macro
 #define sort1(x) sort(fall(x)) // macro
 #define rev(x) reverse(fall(x)) // macro
-#define SIMDE_ENABLE_NATIVE_ALIASES
+#define swap(x,y) (x)=(x)^(y);(y)=(x)^(y);(x)=(x)^(y) // macro
+#define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0) // macro
 int gcd(int a, int b){if(a<b){a=a^b;b=a^b;a=a^b;} return b==0?a:gcd(b,a%b);} // function
 int lcm(int a, int b){return a/gcd(a,b)*b;} // function
+int exp(int a, int b){int r=1;while(b){if(b&1)r=r*a;a=a*a;b>>=1;}return r;} // function
+int ncr(int n, int r){int i,j;if(n==r)return 1;if(r==1)return n;if(r>n/2)r=n-r;int p=1;for(i=0;i<r;i++){p*=n-i;p/=i+1;}return p;} // function
+int npr(int n, int r){int i,j;if(r==0)return 1;if(r==1)return n;int p=1;for(i=0;i<r;i++){p*=n-i;p/=i+1;}return p;} // function
 // variable declarations
 
 // functions
 
 i32 main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
+    fast;
     // code
 
     return 0;
