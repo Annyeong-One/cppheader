@@ -1,14 +1,13 @@
 # Annyeong-One/cppheader
 는 gs22059 / annyeong1 가 Codeforces, AtCoder 등의 Competitive Programing 및 BOJ, Koistudy 등의 Problem Solving 사이트에서 개인적으로 사용하기 위해 만든 C++ 헤더입니다. 
 ## Features
-> ncr, npr, exp 함수 제공 (1.3~) \
-> swap 매크로 제공  (1.3~) \
-> ~~SIMD 제공 (1.2~)~~ \
-> sort, reverse 매크로 기능 제공 (1.1~) \
-> cin/cout 최적화 및 리다이렉트 제공 (1.1~) \
-> gcd, lcm 함수 제공 (1.0~) \
-> for문 2-변수, 3-변수 매크로 제공 (1.0~) \
-> int 자동 64-bit화 제공 (1.0~) 
+- ncr, npr, exp 함수 제공 (1.3~)
+- swap 매크로 제공  (1.3~)
+- sort, reverse 매크로 기능 제공 (1.1~)
+- cin/cout 최적화 및 리다이렉트 제공 (1.1~)
+- gcd, lcm 함수 제공 (1.0~)
+- for문 2-변수, 3-변수 매크로 제공 (1.0~)
+- int 자동 64-bit화 제공 (1.0~)
 ### #define Redirects
 > int 를 long long 으로 redirect \
 > ll 을 long long 으로 redirect \
@@ -27,13 +26,17 @@
 ### Functions
 > gcd(x,y) : Great Common Divisor 함수, long long 범위 재귀함수 \
 > lcm(x,y) : Least Common Multiplier 함수, long long 범위 (gcd 함수에 종속) \
-> exp(x,y) : x의 y제곱을 O(log y) 시간에 계산하는 long long 범위 함수 \
-> ncr(x,y) : Combination 함수, long long 범위 함수 \
-> npr(x,y) : Permutation 함수, long long 범위 함수
+> exp(x,y) : x의 y제곱을 O(log y) 시간에 계산하는 long long 범위 함수 
 ## Presettings in main()
 > i32 (32-bit signed) main 사용 \
 > fast 최적화 적용 \
 > return 기본값 0으로 설정
+## Deprecated / Deleted
+> ### Features
+>> ~~SIMD 제공 (1.2~)~~ 1.3에서 삭제함
+> ### Functions
+>> ~~ncr(x,y) : Combination 함수, long long 범위 함수~~ 1.3.1에서 삭제함 \
+>> ~~npr(x,y) : Permutation 함수, long long 범위 함수~~ 1.3.1에서 삭제함
 ## Source Code
 ```c++
 #include<bits/stdc++.h> // header
@@ -54,8 +57,6 @@ using namespace std; // std function
 int gcd(int a, int b){if(a<b){a=a^b;b=a^b;a=a^b;} return b==0?a:gcd(b,a%b);} // function
 int lcm(int a, int b){return a/gcd(a,b)*b;} // function
 int exp(int a, int b){int r=1;while(b){if(b&1)r=r*a;a=a*a;b>>=1;}return r;} // function
-int ncr(int n, int r){int i,j;if(n==r)return 1;if(r==1)return n;if(r>n/2)r=n-r;int p=1;for(i=0;i<r;i++){p*=n-i;p/=i+1;}return p;} // function
-int npr(int n, int r){int i,j;if(r==0)return 1;if(r==1)return n;int p=1;for(i=0;i<r;i++){p*=n-i;p/=i+1;}return p;} // function
 // variable declarations
 
 // functions
@@ -67,3 +68,33 @@ i32 main(){
     return 0;
 }
 ```
+
+## Changelog
+1.3.1
+- Deleted : function ncr, function npr, macro swap
+
+1.3
+- Added redirects : elif
+- Added macros : swap, fast
+- Added functions : function ncr, function npr, function exp
+- Deleted : SIMD functionset
+- ios to stdio async is now customizable
+
+1.2
+- Added : SIMD functionset
+
+1.1
+- Added redirects : ll, sort1, rev
+- ios to stdio is now not sync
+
+1.0.2
+- Added redirects : endl
+- Added macros : fall
+
+1.0.1
+- Added functions : gcd, lcm
+- Deleted : ll
+
+1.0
+- Initial Commit
+- Added macros : f2, f2b, f3, ll, int

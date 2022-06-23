@@ -16,8 +16,6 @@ using namespace std; // std function
 int gcd(int a, int b){if(a<b){a=a^b;b=a^b;a=a^b;} return b==0?a:gcd(b,a%b);} // function
 int lcm(int a, int b){return a/gcd(a,b)*b;} // function
 int exp(int a, int b){int r=1;while(b){if(b&1)r=r*a;a=a*a;b>>=1;}return r;} // function
-int ncr(int n, int r){int i,j;if(n==r)return 1;if(r==1)return n;if(r>n/2)r=n-r;int p=1;for(i=0;i<r;i++){p*=n-i;p/=i+1;}return p;} // function
-int npr(int n, int r){int i,j;if(r==0)return 1;if(r==1)return n;int p=1;for(i=0;i<r;i++){p*=n-i;p/=i+1;}return p;} // function
 // variable declarations
 
 // functions
