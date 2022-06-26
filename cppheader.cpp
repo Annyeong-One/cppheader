@@ -11,7 +11,6 @@ using namespace std; // std function
 #define fall(x) (x).begin(), (x).end() // macro
 #define sort1(x) sort(fall(x)) // macro
 #define rev(x) reverse(fall(x)) // macro
-#define swap(x,y) (x)=(x)^(y);(y)=(x)^(y);(x)=(x)^(y) // macro
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0) // macro
 int gcd(int a, int b){if(a<b){a=a^b;b=a^b;a=a^b;} return b==0?a:gcd(b,a%b);} // function
 int lcm(int a, int b){return a/gcd(a,b)*b;} // function
