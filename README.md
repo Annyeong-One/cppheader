@@ -1,8 +1,7 @@
 # Annyeong-One/cppheader
 는 gs22059 / annyeong1 가 Codeforces, AtCoder 등의 Competitive Programing 및 BOJ, Koistudy 등의 Problem Solving 사이트에서 개인적으로 사용하기 위해 만든 C++ 헤더입니다. 
 ## Features
-- ncr, npr, exp 함수 제공 (1.3~)
-- swap 매크로 제공  (1.3~)
+- exp 함수 제공 (1.3~)
 - sort, reverse 매크로 기능 제공 (1.1~)
 - cin/cout 최적화 및 리다이렉트 제공 (1.1~)
 - gcd, lcm 함수 제공 (1.0~)
@@ -21,7 +20,6 @@
 > fall(x) : sort, reverse 등에서 사용하는 x.begin(), x.end() 매크로문 \
 > sort1(x) : 단순 배열이 아닌 x를 stl 정렬하는 매크로문 (algorithm 헤더 종속) \
 > rev(x) : 단순 배열이 아닌 x를 stl 뒤집는 매크로문 (algorithm 헤더 종속) \
-> swap(x,y) : x와 y의 값을 바꾸는 매크로문 \
 > fast : cin/cout 최적화를 위한 매크로문
 ### Functions
 > gcd(x,y) : Great Common Divisor 함수, long long 범위 재귀함수 \
@@ -34,6 +32,8 @@
 ## Deprecated / Deleted
 > ### Features
 >> ~~SIMD 제공 (1.2~)~~ 1.3에서 삭제함
+> ### #define macros
+>> ~~swap(x,y) : x와 y의 값을 바꾸는 매크로문~~ 1.3.1에서 삭제함 \
 > ### Functions
 >> ~~ncr(x,y) : Combination 함수, long long 범위 함수~~ 1.3.1에서 삭제함 \
 >> ~~npr(x,y) : Permutation 함수, long long 범위 함수~~ 1.3.1에서 삭제함
