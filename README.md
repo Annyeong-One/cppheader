@@ -42,11 +42,12 @@ using namespace std; // std function
 #define i32 int // redirect
 #define i64 long long // redirect
 #define ll long long // redirect
+#define p32 pair<i32,i32> // redirect
+#define p64 pair<i64,i64> // redirect
 #define endl '\n' // redirect
 #define elif else if // redirect
 #define fi first // redirect
 #define se second // redirect
-#define pii pair<int,int> // redirect
 #define pb push_back // redirect
 #define f2(i,x) for((i)=0; (i)<(x); (i)++) // macro
 #define f2b(i,x) for((i)=(x)-1; (i)>=0; (i)--) // macro
@@ -65,7 +66,7 @@ int expm(int a, int b, int m){int r=1;while(b){if(b&1)r=r*a%m;a=a*a%m;b>>=1;}ret
 i32 main(){
     fast;
     // code
-    
+
     return 0;
 }
 ```
