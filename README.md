@@ -1,16 +1,7 @@
 # Annyeong-One/cppheader
 는 gs22059 / annyeong1 가 Codeforces, AtCoder 등의 Competitive Programing 및 BOJ, Koistudy 등의 Problem Solving 사이트에서 개인적으로 사용하기 위해 만든 C++ 헤더입니다. 
-## Features
-- fi, se, pb 리다이렉트 제공 (1.4~)
-- i32, i64, p32, p64 리다이렉트 제공 (1.4~)
-- exp 함수 제공 (1.3~)
-- sort, reverse 매크로 기능 제공 (1.1~)
-- cin/cout 최적화 및 리다이렉트 제공 (1.1~)
-- gcd, lcm 함수 제공 (1.0~)
-- for문 2-변수, 3-변수 매크로 제공 (1.0~)
 ### #define Redirects
 > i64 을 long long 으로 redirect \
-> ll 을 long long 으로 redirect \
 > i32 을 int(signed) 으로 redirect \
 > p32 을 pair<i32,i32>으로 redirect \
 > p64 을 pair<i64,i64>으로 redirect \
@@ -38,17 +29,20 @@
 ## Source Code
 ```c++
 #include<bits/stdc++.h> // header
+//#pragma GCC optimize("O3") // optimization
+//#pragma GCC optimize("Ofast") // optimization
+//#pragma GCC optimize("unroll-loops") // optimization
 using namespace std; // std function
-#define i32 int // redirect
+#define i32 signed // redirect
+#define int long long // redirect
 #define i64 long long // redirect
-#define ll long long // redirect
-#define p32 pair<i32,i32> // redirect
-#define p64 pair<i64,i64> // redirect
 #define endl '\n' // redirect
 #define elif else if // redirect
 #define fi first // redirect
 #define se second // redirect
 #define pb push_back // redirect
+#define p32 pair<i32,i32> // redirect
+#define p64 pair<i64, i64> // redirect
 #define f2(i,x) for((i)=0; (i)<(x); (i)++) // macro
 #define f2b(i,x) for((i)=(x)-1; (i)>=0; (i)--) // macro
 #define f3(i,f,t) for((i)=(f);(i)<=(t);(i)++) // macro
@@ -58,50 +52,14 @@ using namespace std; // std function
 #define fast ios::sync_with_stdio(0); cin.tie(0); cout.tie(0) // macro
 int gcd(int a, int b){if(a<b){a=a^b;b=a^b;a=a^b;} return b==0?a:gcd(b,a%b);} // function
 int lcm(int a, int b){return a/gcd(a,b)*b;} // function
-int expm(int a, int b, int m){int r=1;while(b){if(b&1)r=r*a%m;a=a*a%m;b>>=1;}return r%m;} // function
+int exp_mod(int a, int b, int m){int r=1;while(b){if(b&1)r=r*a%m;a=a*a%m;b>>=1;}return r%m;} // function
 // variable declarations
-
-// functions
-
+int n,m,k;
 i32 main(){
     fast;
     // code
+    int i,j,l;
 
     return 0;
 }
 ```
-
-## Changelog
-
-1.4
-- Deleted : redirect int
-- Added redirects : fi, se, pb, i32, i64, p32, p64
-
-1.3.1
-- Deleted : function ncr, function npr, macro swap
-
-1.3
-- Added redirects : elif
-- Added macros : swap, fast
-- Added functions : function ncr, function npr, function exp
-- Deleted : SIMD functionset
-- ios to stdio async is now customizable
-
-1.2
-- Added : SIMD functionset
-
-1.1
-- Added redirects : ll, sort1, rev
-- ios to stdio is now not sync
-
-1.0.2
-- Added redirects : endl
-- Added macros : fall
-
-1.0.1
-- Added functions : gcd, lcm
-- Deleted : ll
-
-1.0
-- Initial Commit
-- Added macros : f2, f2b, f3, ll, int
